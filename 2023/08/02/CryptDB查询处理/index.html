@@ -13,22 +13,25 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/07/19/hello-world/"/>
+    <link rel="canonical" href="http://example.com/2023/08/02/cryptdb查询处理/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="Welcome to Hexo ! This is your very first post. Check documentation  for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting  or you can ask me on GitHub . Q">
+        <meta name="description" content="CryptDB查询处理查询步骤1、应用程序发出一个查询，代理拦截并重写该查询：它匿名化每个表和列名，并使用主密钥MK（存储在代理中），用 最适合所需操作的加密方案对查询中的每个常量进行加密。 2、代理在执行查询之前检查是否应该为DBMS服务器提供密钥来调整加密层，如果是，在DBMS服务 器上发出UPDATE查询，调用UDF来调整相应列的加密层。  3、代理将加密的查询转发到DBMS服务器，后者使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/07/19/hello-world/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/08/02/CryptDB%E6%9F%A5%E8%AF%A2%E5%A4%84%E7%90%86/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo ! This is your very first post. Check documentation  for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting  or you can ask me on GitHub . Q">
+<meta property="og:description" content="CryptDB查询处理查询步骤1、应用程序发出一个查询，代理拦截并重写该查询：它匿名化每个表和列名，并使用主密钥MK（存储在代理中），用 最适合所需操作的加密方案对查询中的每个常量进行加密。 2、代理在执行查询之前检查是否应该为DBMS服务器提供密钥来调整加密层，如果是，在DBMS服务 器上发出UPDATE查询，调用UDF来调整相应列的加密层。  3、代理将加密的查询转发到DBMS服务器，后者使用">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-07-19T08:58:03.251Z">
-<meta property="article:modified_time" content="2023-07-19T08:57:30.331Z">
+<meta property="og:image" content="c:\Users\16251\AppData\Roaming\Typora\typora-user-images\image-20230728194728162.png">
+<meta property="og:image" content="c:\Users\16251\AppData\Roaming\Typora\typora-user-images\image-20230731085058943.png">
+<meta property="article:published_time" content="2023-08-02T08:31:00.704Z">
+<meta property="article:modified_time" content="2023-07-31T07:59:41.056Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\16251\AppData\Roaming\Typora\typora-user-images\image-20230728194728162.png">
     
     
     <!--- Icon Part-->
@@ -39,8 +42,6 @@
     <!--- Page Info-->
     
     <title>
-        
-            Hello World -
         
         Lion&#39;s Blog
     </title>
@@ -238,7 +239,7 @@
 
             <div class="article-title">
                 
-                  <h1 class="article-title-regular">Hello World</h1>
+                  <h1 class="article-title-regular"></h1>
                 
               </div>
               
@@ -260,15 +261,15 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-07-19 16:58:03</span>
-        <span class="mobile">2023-07-19 16:58:03</span>
+        <span class="desktop">2023-08-02 16:31</span>
+        <span class="mobile">2023-08-02 16:31</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-07-19 16:57:30</span>
-            <span class="mobile">2023-07-19 16:57:30</span>
+            <span class="desktop">2023-07-31 15:59:41</span>
+            <span class="mobile">2023-07-31 15:59:41</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -292,19 +293,54 @@
             
 
             <div class="article-content markdown-body">
-                <p>Welcome to <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+                <h1 id="CryptDB查询处理"><a href="#CryptDB查询处理" class="headerlink" title="CryptDB查询处理"></a>CryptDB查询处理</h1><h2 id="查询步骤"><a href="#查询步骤" class="headerlink" title="查询步骤"></a>查询步骤</h2><p>1、应用程序发出一个查询，代理拦截并重写该查询：它匿名化每个表和列名，并使用主密钥MK（存储在代理中），用 最适合所需操作的加密方案对查询中的每个常量进行加密。</p>
+<p>2、代理在执行查询之前检查是否应该为DBMS服务器提供密钥来调整加密层，如果是，在DBMS服务 器上发出UPDATE查询，调用UDF来调整相应列的加密层。 </p>
+<p>3、代理将加密的查询转发到DBMS服务器，后者使用标准SQL(偶尔调用udf进行聚合或关键字搜索)执行查询。 </p>
+<p>4、DBMS服务器返回(加密的)查询结果，代理将其解密并返回给应用程序。</p>
+<h2 id="加密种类"><a href="#加密种类" class="headerlink" title="加密种类"></a>加密种类</h2><p>1、Random (RND)：RND在CryptDB中提供了最大的安全性。其可以将相等的明文映射到不同的密文，同时也不允许对密文进行任何计算。RND中的算法包括CBC模式下AES和Blowfish这样的块密码，其中又以AES为主。</p>
+<p>2、Deterministic (DET)：DET也提供了极大的安全性，但比RND稍弱。其可以将相等的明文映射到相同的密文，这也导致会泄露一部分相等密文的信息。DET中的算法包括CMC模式下的AES算法，主要应用于相等谓词、相等连接、GROUP BY、COUNT、DISTINCT等操作。</p>
+<p>3、Order-preserving encryption (OPE)：OPE的安全性稍弱于DET。其允许基于数据项的加密值建立数据项之间的顺序关系，而 不暴露数据本身。如果x &lt; y，则对于密文$OPE_k(x)&lt;OPE_k(y)$。OPE在服务器上主要应用于范围查询、ORDER BY、MIN、MAX、SORT等操作。</p>
+<p>4、Homomorphic encryption (HOM)：HOM是一种安全的概率加密方案，允许服务器对加密数据执行计算，最终结果在代理上解密，即同态加密。为了支持求和，且由于完全同态加密性能太低，CryptDB采取半同态加密Paillier算法，两个值的加密相乘会得到两个值的和的加密，即$HOM_k(x)*HOM_k(y)&#x3D;HOM_k(x+y)$。HOM一般应用于SUM、平均值、递增值等场景。</p>
+<p>5、Join (JOIN and OPE-JOIN)：为了允许两个列之间的相等连接，需要使用单独的加密方案，DET使用了不同的密钥来防止跨列关联。JOIN还支持DET允许的所有操作，还使服务器能够确定两个列之间的重复值。OPE-JOIN则支持通过顺序关系进行连接。</p>
+<p>6、Word search (SEARCH)：SEARCH用于对加密文本执行搜索，以支持MySQL的LIKE操作符等操作，其索几乎和RND一样安全。对于每个需要SEARCH的列，使用标准分隔符将文本分割为关键字，然后删除这些单词中的重复，随机排列单词的位置， 然后使用Song等人的方案加密每个单词，将每个单词填充到相同的大小。SEARCH只允许CryptDB执行全字关键字搜索，不支持任意正则表达式。</p>
+<h2 id="加密原理"><a href="#加密原理" class="headerlink" title="加密原理"></a>加密原理</h2><p>通过以上说明的加密种类，CryptDB实现了一种可调整的基于查询的加密，它动态地调整DBMS服务器上的加密层，也被称为洋葱加密，如图所示，即像洋葱一样可以一层层剥开。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\16251\AppData\Roaming\Typora\typora-user-images\image-20230728194728162.png"
+                      alt="image-20230728194728162"
+                ></p>
+<p>洋葱有四种，每个数据项都由一个或多个洋葱加密，而每个洋葱的每一层都实现了不同的功能，最外层提供最大的安全性，例如RND、HOM，最内层提供最丰富的功能，例如JOIN、OPE-JOIN。另外，有些列无需创建洋葱，例如Search洋葱对整数没有意义，Add洋葱对字符串没有意义。</p>
+<p>CryptDB对同一列的的数据使用相同的密钥，而跨表、跨列、跨洋葱和跨洋葱层则使用不同的密钥，而所有这些密钥都来自于主密钥MK。例如，对于表t、列c、洋葱o和加密层l，代理使用密钥：$K_t,c,o,l&#x3D;PRP_{MK}(table_t,column_c,onion_o,layer_l)$，其中PRP是一种伪随机排列(如AES)。</p>
+<h2 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h2><p>下面以该表为例，举一些常见的查询语句例子来说明CryptDB的查询处理</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\16251\AppData\Roaming\Typora\typora-user-images\image-20230731085058943.png"
+                      alt="image-20230731085058943"
+                ></p>
+<h5 id="插入请求"><a href="#插入请求" class="headerlink" title="插入请求"></a>插入请求</h5><p>应用向数据库发出插入请求，被代理拦截下来</p>
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Employees <span class="keyword">values</span>(<span class="number">1</span>, &quot;Bob&quot;);</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+<p>代理对请求进行改写，每一列明文在数据库中的存储将变为多列密文</p>
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Table1 <span class="keyword">values</span>(C1<span class="operator">-</span>IV, C1<span class="operator">-</span>Eq, C1<span class="operator">-</span>Ord, C1<span class="operator">-</span><span class="keyword">Add</span>, C2<span class="operator">-</span>IV, C2<span class="operator">-</span>Eq, C2<span class="operator">-</span>Ord, C2<span class="operator">-</span><span class="keyword">Search</span>);</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+<h5 id="等值查询"><a href="#等值查询" class="headerlink" title="等值查询"></a>等值查询</h5><p>应用向数据库发出查询，被代理拦截下来</p>
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ID <span class="keyword">FROM</span> Employees <span class="keyword">WHERE</span> Name <span class="operator">=</span> <span class="string">&#x27;Alice&#x27;</span></span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+<p>首先需将Name列的洋葱降低到对DET层的加密（假设此时在RND层）,代理向数据库发出更新请求，其中K为K<del>T1,C2,Eq,RND</del></p>
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> Table1 <span class="keyword">SET</span> C2<span class="operator">-</span>Eq <span class="operator">=</span> DECRYPT_RND(K, C2<span class="operator">-</span>Eq, C2<span class="operator">-</span>IV)</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>更新完成后，代理将原来的查询语句改写并发往数据库，其中x7..d为Alice被 K<del>T1,C2,Eq,DET</del>和K<del>T1,C2,Eq,JOIN</del> 加密后的结果</p>
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> C1<span class="operator">-</span>Eq, C1<span class="operator">-</span>IV <span class="keyword">FROM</span> Table1 <span class="keyword">WHERE</span> C2<span class="operator">-</span>Eq <span class="operator">=</span> x7..d</span><br></pre></td></tr></table></figure></div>
+
+<p>最后，代理使用密钥 K<del>T1,C1,Eq,RND</del>  K<del>T1,C1,Eq,DET</del>和K<del>T1,C1,Eq,JOIN</del> 解密来自数据库的结果，获得结果23，并将其返回应用</p>
+<p>此时如果应用发出查询</p>
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">FROM</span> Employees <span class="keyword">WHERE</span> Name <span class="operator">=</span> <span class="string">&#x27;Bob&#x27;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>由于此时C2-Eq的洋葱层在DET层，无需对洋葱层进行更新，因此代理直接对数据库发出查询，其中xbb..4为Bob被 K<del>T1,C2,Eq,DET</del>和K<del>T1,C2,Eq,JOIN</del> 加密后的结果</p>
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> C1<span class="operator">-</span>Eq, C1<span class="operator">-</span>IV <span class="keyword">FROM</span> Table1 <span class="keyword">WHERE</span> C2<span class="operator">-</span>Eq <span class="operator">=</span> xbb.<span class="number">.4</span></span><br></pre></td></tr></table></figure></div>
+
 
             </div>
 
@@ -312,16 +348,16 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> Hello World</li>
+        <li><strong>Title:</strong> </li>
         <li><strong>Author:</strong> Lion</li>
-        <li><strong>Created at:</strong> 2023-07-19 16:58:03</li>
+        <li><strong>Created at:</strong> 2023-08-02 16:31:00</li>
         
             <li>
-                <strong>Updated at:</strong> 2023-07-19 16:57:30
+                <strong>Updated at:</strong> 2023-07-31 15:59:41
             </li>
         
         <li>
-            <strong>Link:</strong> https://lionhehao.github.io/2023/07/19/hello-world/
+            <strong>Link:</strong> https://lionhehao.github.io/2023/08/02/CryptDB查询处理/
         </li>
         <li>
             <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
@@ -339,21 +375,21 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/08/02/CryptDB%E6%9F%A5%E8%AF%A2%E5%A4%84%E7%90%86/"
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/07/19/hello-world/"
                             >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item"></span>
-                                    <span class="post-nav-item">Prev posts</span>
+                                    <span class="post-nav-title-item">Hello World</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
                                 </span>
                             </a>
                         </div>
-                    
                     
                 </div>
             
@@ -411,8 +447,8 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">Hello World</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <div class="page-title"></div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CryptDB%E6%9F%A5%E8%AF%A2%E5%A4%84%E7%90%86"><span class="nav-text">CryptDB查询处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E6%AD%A5%E9%AA%A4"><span class="nav-text">查询步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E7%A7%8D%E7%B1%BB"><span class="nav-text">加密种类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E5%8E%9F%E7%90%86"><span class="nav-text">加密原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BE%E4%BE%8B%E8%AF%B4%E6%98%8E"><span class="nav-text">举例说明</span></a></li></ol></li></ol>
 
     </div>
 </div>
