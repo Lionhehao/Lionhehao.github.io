@@ -18,20 +18,20 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="CryptDB查询处理查询步骤1、应用程序发出一个查询，代理拦截并重写该查询：它匿名化每个表和列名，并使用主密钥MK（存储在代理中），用 最适合所需操作的加密方案对查询中的每个常量进行加密。 2、代理在执行查询之前检查是否应该为DBMS服务器提供密钥来调整加密层，如果是，在DBMS服务 器上发出UPDATE查询，调用UDF来调整相应列的加密层。  3、代理将加密的查询转发到DBMS服务器，后者使用">
+        <meta name="description" content="查询步骤1、应用程序发出一个查询，代理拦截并重写该查询：它匿名化每个表和列名，并使用主密钥MK（存储在代理中），用 最适合所需操作的加密方案对查询中的每个常量进行加密。 2、代理在执行查询之前检查是否应该为DBMS服务器提供密钥来调整加密层，如果是，在DBMS服务 器上发出UPDATE查询，调用UDF来调整相应列的加密层。  3、代理将加密的查询转发到DBMS服务器，后者使用标准SQL(偶尔调用u">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="CryptDB查询处理">
 <meta property="og:url" content="http://example.com/2023/08/02/CryptDB%E6%9F%A5%E8%AF%A2%E5%A4%84%E7%90%86/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="CryptDB查询处理查询步骤1、应用程序发出一个查询，代理拦截并重写该查询：它匿名化每个表和列名，并使用主密钥MK（存储在代理中），用 最适合所需操作的加密方案对查询中的每个常量进行加密。 2、代理在执行查询之前检查是否应该为DBMS服务器提供密钥来调整加密层，如果是，在DBMS服务 器上发出UPDATE查询，调用UDF来调整相应列的加密层。  3、代理将加密的查询转发到DBMS服务器，后者使用">
+<meta property="og:description" content="查询步骤1、应用程序发出一个查询，代理拦截并重写该查询：它匿名化每个表和列名，并使用主密钥MK（存储在代理中），用 最适合所需操作的加密方案对查询中的每个常量进行加密。 2、代理在执行查询之前检查是否应该为DBMS服务器提供密钥来调整加密层，如果是，在DBMS服务 器上发出UPDATE查询，调用UDF来调整相应列的加密层。  3、代理将加密的查询转发到DBMS服务器，后者使用标准SQL(偶尔调用u">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="c:\Users\16251\AppData\Roaming\Typora\typora-user-images\image-20230728194728162.png">
-<meta property="og:image" content="c:\Users\16251\AppData\Roaming\Typora\typora-user-images\image-20230731085058943.png">
+<meta property="og:image" content="http://example.com/images/image-20230728194709832.png">
+<meta property="og:image" content="http://example.com/..%5Cimages%5Cimage-20230731085058943.png">
 <meta property="article:published_time" content="2023-08-02T08:31:00.704Z">
-<meta property="article:modified_time" content="2023-07-31T07:59:41.056Z">
+<meta property="article:modified_time" content="2023-08-07T01:12:35.011Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:\Users\16251\AppData\Roaming\Typora\typora-user-images\image-20230728194728162.png">
+<meta name="twitter:image" content="http://example.com/images/image-20230728194709832.png">
     
     
     <!--- Icon Part-->
@@ -42,6 +42,8 @@
     <!--- Page Info-->
     
     <title>
+        
+            CryptDB查询处理 -
         
         Lion&#39;s Blog
     </title>
@@ -239,7 +241,7 @@
 
             <div class="article-title">
                 
-                  <h1 class="article-title-regular"></h1>
+                  <h1 class="article-title-regular">CryptDB查询处理</h1>
                 
               </div>
               
@@ -268,8 +270,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-07-31 15:59:41</span>
-            <span class="mobile">2023-07-31 15:59:41</span>
+            <span class="desktop">2023-08-07 09:12:35</span>
+            <span class="mobile">2023-08-07 09:12:35</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -293,7 +295,7 @@
             
 
             <div class="article-content markdown-body">
-                <h1 id="CryptDB查询处理"><a href="#CryptDB查询处理" class="headerlink" title="CryptDB查询处理"></a>CryptDB查询处理</h1><h2 id="查询步骤"><a href="#查询步骤" class="headerlink" title="查询步骤"></a>查询步骤</h2><p>1、应用程序发出一个查询，代理拦截并重写该查询：它匿名化每个表和列名，并使用主密钥MK（存储在代理中），用 最适合所需操作的加密方案对查询中的每个常量进行加密。</p>
+                <h2 id="查询步骤"><a href="#查询步骤" class="headerlink" title="查询步骤"></a>查询步骤</h2><p>1、应用程序发出一个查询，代理拦截并重写该查询：它匿名化每个表和列名，并使用主密钥MK（存储在代理中），用 最适合所需操作的加密方案对查询中的每个常量进行加密。</p>
 <p>2、代理在执行查询之前检查是否应该为DBMS服务器提供密钥来调整加密层，如果是，在DBMS服务 器上发出UPDATE查询，调用UDF来调整相应列的加密层。 </p>
 <p>3、代理将加密的查询转发到DBMS服务器，后者使用标准SQL(偶尔调用udf进行聚合或关键字搜索)执行查询。 </p>
 <p>4、DBMS服务器返回(加密的)查询结果，代理将其解密并返回给应用程序。</p>
@@ -303,20 +305,19 @@
 <p>4、Homomorphic encryption (HOM)：HOM是一种安全的概率加密方案，允许服务器对加密数据执行计算，最终结果在代理上解密，即同态加密。为了支持求和，且由于完全同态加密性能太低，CryptDB采取半同态加密Paillier算法，两个值的加密相乘会得到两个值的和的加密，即$HOM_k(x)*HOM_k(y)&#x3D;HOM_k(x+y)$。HOM一般应用于SUM、平均值、递增值等场景。</p>
 <p>5、Join (JOIN and OPE-JOIN)：为了允许两个列之间的相等连接，需要使用单独的加密方案，DET使用了不同的密钥来防止跨列关联。JOIN还支持DET允许的所有操作，还使服务器能够确定两个列之间的重复值。OPE-JOIN则支持通过顺序关系进行连接。</p>
 <p>6、Word search (SEARCH)：SEARCH用于对加密文本执行搜索，以支持MySQL的LIKE操作符等操作，其索几乎和RND一样安全。对于每个需要SEARCH的列，使用标准分隔符将文本分割为关键字，然后删除这些单词中的重复，随机排列单词的位置， 然后使用Song等人的方案加密每个单词，将每个单词填充到相同的大小。SEARCH只允许CryptDB执行全字关键字搜索，不支持任意正则表达式。</p>
-<h2 id="加密原理"><a href="#加密原理" class="headerlink" title="加密原理"></a>加密原理</h2><p>通过以上说明的加密种类，CryptDB实现了一种可调整的基于查询的加密，它动态地调整DBMS服务器上的加密层，也被称为洋葱加密，如图所示，即像洋葱一样可以一层层剥开。</p>
-<p><img  
+<h2 id="加密原理"><a href="#加密原理" class="headerlink" title="加密原理"></a>加密原理</h2><p>通过以上说明的加密种类，CryptDB实现了一种可调整的基于查询的加密，它动态地调整DBMS服务器上的加密层，也被称为洋葱加密，如图所示，即像洋葱一样可以一层层剥开。<img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="C:\Users\16251\AppData\Roaming\Typora\typora-user-images\image-20230728194728162.png"
-                      alt="image-20230728194728162"
+                     data-src="/../images/image-20230728194709832.png"
+                     
                 ></p>
 <p>洋葱有四种，每个数据项都由一个或多个洋葱加密，而每个洋葱的每一层都实现了不同的功能，最外层提供最大的安全性，例如RND、HOM，最内层提供最丰富的功能，例如JOIN、OPE-JOIN。另外，有些列无需创建洋葱，例如Search洋葱对整数没有意义，Add洋葱对字符串没有意义。</p>
-<p>CryptDB对同一列的的数据使用相同的密钥，而跨表、跨列、跨洋葱和跨洋葱层则使用不同的密钥，而所有这些密钥都来自于主密钥MK。例如，对于表t、列c、洋葱o和加密层l，代理使用密钥：$K_t,c,o,l&#x3D;PRP_{MK}(table_t,column_c,onion_o,layer_l)$，其中PRP是一种伪随机排列(如AES)。</p>
+<p>CryptDB对同一列的的数据使用相同的密钥，而跨表、跨列、跨洋葱和跨洋葱层则使用不同的密钥，而所有这些密钥都来自于主密钥MK。例如，对于表t、列c、洋葱o和加密层l，代理使用密钥：$$K_t,c,o,l&#x3D;PRP_{MK}(table_t,column_c,onion_o,layer_l)$$，其中PRP是一种伪随机排列(如AES)。</p>
 <h2 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h2><p>下面以该表为例，举一些常见的查询语句例子来说明CryptDB的查询处理</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="C:\Users\16251\AppData\Roaming\Typora\typora-user-images\image-20230731085058943.png"
+                     data-src="/..%5Cimages%5Cimage-20230731085058943.png"
                       alt="image-20230731085058943"
                 ></p>
 <h5 id="插入请求"><a href="#插入请求" class="headerlink" title="插入请求"></a>插入请求</h5><p>应用向数据库发出插入请求，被代理拦截下来</p>
@@ -348,12 +349,12 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> </li>
+        <li><strong>Title:</strong> CryptDB查询处理</li>
         <li><strong>Author:</strong> Lion</li>
         <li><strong>Created at:</strong> 2023-08-02 16:31:00</li>
         
             <li>
-                <strong>Updated at:</strong> 2023-07-31 15:59:41
+                <strong>Updated at:</strong> 2023-08-07 09:12:35
             </li>
         
         <li>
@@ -447,8 +448,8 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title"></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CryptDB%E6%9F%A5%E8%AF%A2%E5%A4%84%E7%90%86"><span class="nav-text">CryptDB查询处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E6%AD%A5%E9%AA%A4"><span class="nav-text">查询步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E7%A7%8D%E7%B1%BB"><span class="nav-text">加密种类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E5%8E%9F%E7%90%86"><span class="nav-text">加密原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BE%E4%BE%8B%E8%AF%B4%E6%98%8E"><span class="nav-text">举例说明</span></a></li></ol></li></ol>
+        <div class="page-title">CryptDB查询处理</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E6%AD%A5%E9%AA%A4"><span class="nav-text">查询步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E7%A7%8D%E7%B1%BB"><span class="nav-text">加密种类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E5%8E%9F%E7%90%86"><span class="nav-text">加密原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BE%E4%BE%8B%E8%AF%B4%E6%98%8E"><span class="nav-text">举例说明</span></a></li></ol>
 
     </div>
 </div>
